@@ -27,6 +27,7 @@
 #include <ifaddrs.h>
 #include <net/if.h>
 #include <stdbool.h>
+#include <signal.h>
 
 #define TAM_MSG 512
 
