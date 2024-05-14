@@ -1,9 +1,9 @@
 /*
-** Fichero: multicast.c
+** Fichero: suscriptor.c
 ** Autores:
-** Javier García Pechero  DNI 70906279Q
-** Germán Francés Tostado DNI 70940996A
-** Usuario: i0906279
+** Javier Galante Gómez DNI 52417330P
+** Manuel García Galante DNI 70957430S
+** Usuario: i2417330
 */
 
 #include <sys/types.h>      /* basic system data types */

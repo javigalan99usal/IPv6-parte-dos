@@ -1,9 +1,9 @@
 /*
-** Fichero: multicast.c
+** Fichero: difusor.c
 ** Autores:
-** Javier García Pechero  DNI 70906279Q
-** Germán Francés Tostado DNI 70940996A
-** Usuario: i0906279
+** Javier Galante Gómez DNI 52417330P
+** Manuel García Galante DNI 70957430S
+** Usuario: i2417330
 */
 
 #include <sys/types.h>
@@ -30,10 +30,14 @@ void SIGINTHandler(int signo)
 
 int main(int argc, char *argv[])
 {
-    char msg[TAM_MSG] = "Hola que tal";
     char multicast_addr[INET6_ADDRSTRLEN] = "ff15::66";
     char iface[64] = "eth0";
-    int puerto = 4343, saltos = 15, intervalo = 10;
+    int puerto = 4343;
+
+    char msg[TAM_MSG] = "Hola que tal";
+    int saltos = 15;
+    int intervalo = 10;
+
     int sockfd, interfaz;
     struct sockaddr_in6 servaddr;
 
@@ -90,8 +94,11 @@ int main(int argc, char *argv[])
         {
             perror("sendto error");
         }
+        else
+        {
+            printf("Mensaje enviado: %s\n", msg);
+        }
     }
-
     close(sockfd);
     return 0;
 }
